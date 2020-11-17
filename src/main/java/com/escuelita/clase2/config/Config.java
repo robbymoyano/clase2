@@ -32,6 +32,7 @@ public class Config {
 	@Bean
 	public CalculatorSoap getSoapClient() {
 		String endpoint = "http://www.dneonline.com/calculator.asmx?wsdl";
+		//String endpoint = "http://localhost:8088/mockCalculatorSoap?WSDL";
 		int timeOut = 6000;
 
 		int requestTimeout = timeOut;

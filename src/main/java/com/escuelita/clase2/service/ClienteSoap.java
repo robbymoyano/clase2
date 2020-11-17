@@ -26,9 +26,14 @@ public class ClienteSoap {
 		Add suma = new Add();
 		suma.setIntA(40);
 		suma.setIntB(71);
+		try {
+			AddResponse resultado = port.add(suma);
+			log.info("{}", resultado.getAddResult());
+		}
+		catch(Exception e) {
+			log.error("Error al consumir soap: {}", e.getMessage());
+		}
 		
-		AddResponse resultado = port.add(suma);
-		log.info("{}", resultado.getAddResult());
 		
 	}
 }
